@@ -9,14 +9,14 @@ If I have more time, I'll probably:
   pagination.
 * add more spatial functionality, like filtering listing requests by custom
   AOI polygons.
-* add more tests for 100% test coverage
+* add more tests for 100% test coverage.
 * add more backend scripts, and enhance the existing ``import_listings.py``.
 
 Prerequisites
 -------------
 ode uses PostgreSQL/PostGIS as its backend, so it's important to have that
 installed on the system. Configuration is pretty minimal. For demo and testing
-purposes, I use the postgres user and create a database called ``listings``.
+purposes, I use the postgres user and create a database called listings.
 
 Installation
 ------------
@@ -26,7 +26,19 @@ From source:
 
         $ ./setup.py install
 
-``setup.py`` should fetch all required Python dependencies.
+``setup.py`` should fetch all required Python dependencies, which are
+specified in ``requirements.txt``:
+
+.. code::
+
+        Flask==0.10.1
+        GeoAlchemy2==0.2.5
+        itsdangerous==0.24
+        Jinja2==2.8
+        MarkupSafe==0.23
+        psycopg2==2.6.1
+        SQLAlchemy==1.0.8
+        Werkzeug==0.10.4
 
 Scripts
 -------
