@@ -6,7 +6,7 @@ A simple Flask application with geospatial capability
 from .models import Listing
 from flask import Flask, json, jsonify, request
 from geoalchemy2.elements import WKTElement
-from sqlalchemy import create_engine, func
+from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
 # Flask initialization
