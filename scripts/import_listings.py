@@ -22,7 +22,12 @@ def listings(csv_file, table):
     """
     with open(csv_file, 'r') as csvfd:
         reader = csv.reader(csvfd)
-        header = reader.__next__()
+        try:
+            # Python 3
+            header = reader.__next__()
+        except:
+            # Python 2
+            header = reader.next()
         for row in reader:
             record = dict(zip(header, row))
             listing = Listing(id=record.get('id'),
